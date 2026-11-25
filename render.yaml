@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: gitnoob
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    plan: free
+    healthCheckPath: /healthz
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: "10000"
+      - key: GITNOOB_DISABLE_LOCAL_SAVE
+        value: "1"
+      - key: DATA_DIR
+        value: /tmp/gitnoob-data

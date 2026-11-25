@@ -1,0 +1,19 @@
+{
+  "name": "gitnoob",
+  "version": "1.0.0",
+  "description": "GitNoob — Paste any GitHub link, download a ready-to-run app with embedded runtime and native double-click launcher.",
+  "type": "module",
+  "private": true,
+  "engines": {
+    "node": ">=20.0.0"
+  },
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "build:client": "npm --prefix client run build"
+  },
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0"
+  }
+}
